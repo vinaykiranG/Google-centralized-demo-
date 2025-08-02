@@ -1,0 +1,76 @@
+.dashboard-header {
+  margin-bottom: 20px;
+}
+
+.metrics {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.metric-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+}
+
+.demo-list {
+  margin-top: 20px;
+}
+
+.demo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.demo-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.demo-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.demo-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.demo-card-content {
+  padding: 15px;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tags span {
+  background-color: #eee;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 12px;
+  margin-top: 10px;
+  background-color: #28a745;
+  color: white;
+}
+
+.status-badge.archived {
+  background-color: #6c757d;
+}

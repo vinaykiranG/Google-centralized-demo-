@@ -1,0 +1,43 @@
+<div class="demo-detail-container" *ngIf="demo">
+  <div class="demo-detail-header">
+    <h2>{{ demo.title }}</h2>
+    <div class="tags">
+      <span *ngFor="let tag of demo.tags">{{ tag }}</span>
+    </div>
+  </div>
+  <div class="demo-detail-content">
+    <div class="left-column">
+      <p>{{ demo.description }}</p>
+      <div class="video-container" *ngIf="demo.walkthrough_video">
+        <iframe width="560" height="315" [src]="demo.walkthrough_video" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class="right-column">
+      <div class="info-card">
+        <h4>Tech Stack</h4>
+        <ul>
+          <li *ngFor="let tech of demo.tech_stack">{{ tech }}</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>Links</h4>
+        <ul>
+          <li *ngFor="let link of demo.links | keyvalue">
+            <a [href]="link.value" target="_blank">{{ link.key }}</a>
+          </li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h4>Analytics</h4>
+        <ul>
+          <li *ngFor="let analytic of demo.analytics | keyvalue">
+            {{ analytic.key }}: {{ analytic.value }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!demo">
+  <p>Loading demo...</p>
+</div>

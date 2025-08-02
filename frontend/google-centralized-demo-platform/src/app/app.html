@@ -1,0 +1,25 @@
+<div class="main-container">
+  <div class="sidebar">
+    <div class="logo">
+      <h3>Google Centralized Demo Platform</h3>
+    </div>
+    <ul class="nav-links">
+      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+      <li><a routerLink="/demos">Demos</a></li>
+      <li><a routerLink="/analytics">Analytics</a></li>
+      <li><a routerLink="/settings">Settings</a></li>
+    </ul>
+  </div>
+  <div class="main-content">
+    <div class="topbar">
+      <input type="search" placeholder="Search..." />
+      <div class="user-info">
+        <span>User</span>
+        <button (click)="logout()">Logout</button>
+      </div>
+    </div>
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="dashboard-header">
+  <h2>Dashboard</h2>
+</div>
+<div class="metrics">
+  <div class="metric-card">
+    <h4>Total Demos</h4>
+    <p>{{ demos.length }}</p>
+  </div>
+  <div class="metric-card">
+    <h4>Active Demos</h4>
+    <p>{{ demos.filter(d => d.status === 'Active').length }}</p>
+  </div>
+</div>
+<div class="demo-list">
+  <h3>Demos</h3>
+  <div class="demo-cards">
+    <div class="demo-card" *ngFor="let demo of demos">
+      <a [routerLink]="['/demo', demo.id]">
+        <img [src]="demo.thumbnail" alt="Demo thumbnail" />
+        <div class="demo-card-content">
+          <h4>{{ demo.title }}</h4>
+          <p>{{ demo.description }}</p>
+          <div class="tags">
+            <span *ngFor="let tag of demo.tags">{{ tag }}</span>
+          </div>
+          <span class="status-badge" [class.archived]="demo.status === 'Archived'">{{ demo.status }}</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

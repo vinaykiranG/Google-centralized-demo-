@@ -1,0 +1,52 @@
+.demo-detail-container {
+  padding: 20px;
+}
+
+.demo-detail-header {
+  margin-bottom: 20px;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tags span {
+  background-color: #eee;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-size: 12px;
+}
+
+.demo-detail-content {
+  display: flex;
+  gap: 20px;
+}
+
+.left-column {
+  flex-grow: 1;
+}
+
+.right-column {
+  width: 300px;
+}
+
+.video-container {
+  margin-top: 20px;
+}
+
+.info-card {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
