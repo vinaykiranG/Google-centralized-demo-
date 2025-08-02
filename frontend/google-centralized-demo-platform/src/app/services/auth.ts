@@ -25,6 +25,8 @@ export class AuthService {
       providerData: [],
       providerId: 'password',
       tenantId: null,
+      refreshToken: '',
+      phoneNumber: null,
       delete: () => Promise.resolve(),
       getIdToken: () => Promise.resolve('mock-token'),
       getIdTokenResult: () => Promise.resolve({
@@ -57,6 +59,8 @@ export class AuthService {
       providerData: [],
       providerId: 'google.com',
       tenantId: null,
+      refreshToken: '',
+      phoneNumber: null,
       delete: () => Promise.resolve(),
       getIdToken: () => Promise.resolve('mock-google-token'),
       getIdTokenResult: () => Promise.resolve({

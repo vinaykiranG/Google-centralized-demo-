@@ -1,6 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { DemoService } from '../services/demo.service';
-import { DemoSummary } from '../models/demo.model';
+import { DemoService } from '../services/demo.js';
+import { DemoSummary } from '../models/demo.model.js';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -12,12 +12,16 @@ import { RouterLink } from '@angular/router';
   styleUrls: ['./dashboard.scss']
 })
 export class DashboardComponent implements OnInit {
-  demoService = inject(DemoService);
+  demoService: DemoService = inject(DemoService);
   demos: DemoSummary[] = [];
 
   ngOnInit() {
-    this.demoService.getDemos().subscribe(demos => {
+    this.demoService.getDemos().subscribe((demos: DemoSummary[]) => {
       this.demos = demos;
     });
+  }
+
+  getActiveDemosCount(): number {
+    return this.demos.filter(d => d.status === 'Active').length;
   }
 }
